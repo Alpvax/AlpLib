@@ -1,4 +1,4 @@
-package alpvax.common.util;
+package alpvax.util.compare;
 
 /**
  * Class to enable easy in-line concatenation of any CharSequence.

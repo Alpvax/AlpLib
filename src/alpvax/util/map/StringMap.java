@@ -1,4 +1,4 @@
-package alpvax.common.util.generics;
+package alpvax.util.map;
 
 import java.util.HashMap;
 

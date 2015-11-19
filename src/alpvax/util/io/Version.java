@@ -1,4 +1,4 @@
-package alpvax.common.util;
+package alpvax.util.io;
 
 public class Version implements Comparable<Version>
 {

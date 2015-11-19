@@ -1,4 +1,4 @@
-package alpvax.common.util;
+package alpvax.util.io;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,25 +15,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import alpvax.common.util.generics.AlpMap;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
+import alpvax.util.map.CaseInsensitiveStringMap;
+
 public class FileHelper
 {
 	public static final String newLine = String.format("%n");
 
-	public static AlpMap<Object> readJsonFile(InputStream in)
+	public static CaseInsensitiveStringMap<Object> readJsonFile(InputStream in)
 	{
 		return readJsonFile(in, Object.class);
 	}
-	public static <T> AlpMap<T> readJsonFile(InputStream in, Class<T> type, Object typeAdaptor)
+	public static <T> CaseInsensitiveStringMap<T> readJsonFile(InputStream in, Class<T> type, Object typeAdaptor)
 	{
-		AlpMap<T> map = new AlpMap<T>();
+		CaseInsensitiveStringMap<T> map = new CaseInsensitiveStringMap<T>();
 		Gson gson = new GsonBuilder().registerTypeAdapter(type, typeAdaptor).create();
 		JsonParser parser = new JsonParser();
 		try
@@ -58,9 +58,9 @@ public class FileHelper
 		}
 		return map;
 	}
-	public static <T> AlpMap<T> readJsonFile(InputStream in, Class<T> type)
+	public static <T> CaseInsensitiveStringMap<T> readJsonFile(InputStream in, Class<T> type)
 	{
-		AlpMap<T> map = new AlpMap<T>();
+		CaseInsensitiveStringMap<T> map = new CaseInsensitiveStringMap<T>();
 		Gson gson = new Gson();
 		JsonParser parser = new JsonParser();
 		try

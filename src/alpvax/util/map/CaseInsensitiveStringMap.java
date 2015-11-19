@@ -1,10 +1,10 @@
-package alpvax.common.util.generics;
+package alpvax.util.map;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("serial")
-public class AlpMap<T> extends HashMap<String, T>
+public class CaseInsensitiveStringMap<T> extends HashMap<String, T>
 {
 	private Map<String, String> caseMap = new HashMap<String, String>();
 	

@@ -1,4 +1,4 @@
-package alpvax.common.util.generics;
+package alpvax.util.compare;
 
 import java.util.Comparator;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package alpvax.common.util;
+package alpvax.util.io;
 
 import java.io.File;
 import java.io.IOException;

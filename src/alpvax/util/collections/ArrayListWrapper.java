@@ -1,4 +1,4 @@
-package alpvax.common.util.generics;
+package alpvax.util.collections;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -162,7 +162,7 @@ public class ArrayListWrapper<T> extends ArrayList<T>
     public T[] toArray()
     {
     	@SuppressWarnings("unchecked")
-		T[] empty = (T[])Array.newInstance(typeClass, 0);
-		return super.toArray(empty);
+		T[] arr = (T[])Array.newInstance(typeClass, size());
+		return super.toArray(arr);
     }
 }
